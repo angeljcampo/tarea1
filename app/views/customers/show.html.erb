@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="card text-center">
+  <div class="card-header bg-dark text-light h2">
+    <%= @customer.name %> 
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Rut: <%= @customer.rut %> </h5>
+    <p class="card-text">Business Line: <%= @customer.businessLine %></p>
+    <p class="card-text">Address: <%= @customer.address %></p>
+  </div>
+  <div class="card-footer text-muted">
+    <a href="<%= edit_customer_path(@customer) %>" class="btn btn-primary">Edit</a>
+  </div>
+</div>
+
+<%= link_to 'Back', customers_path, class: "btn btn-dark mt-3" %>
